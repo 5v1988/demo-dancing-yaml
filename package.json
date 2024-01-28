@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dancing-yaml": "^1.0.0-RC11"
+    "dancing-yaml": "^1.0.0-RC12"
   }
 }

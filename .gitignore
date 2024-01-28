@@ -1,0 +1,6 @@
+node_modules
+src/.DS_Store
+src/resources/.DS_Store
+src/resources/snapshots/.DS_Store
+.DS_Store
+package-lock.json
