@@ -3,8 +3,6 @@ headless: false
 device: Desktop Chrome
 environment: qa
 url: https://example.cypress.io/todo#/
-default_wait_seconds: 5
-
 #Report related configurations
 reportTheme: 'bootstrap' # 'bootstrap' or 'simple' or 'foundation' or 'hierarchy'
 reportJson: 'src/resources/reports/results.json'
