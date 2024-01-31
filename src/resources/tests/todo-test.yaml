@@ -42,7 +42,7 @@ tests:
       - name: Screenshot after adding all items
         pause: 1
         action: snapshot
-        path: "src/example/resources/snapshots/original-screenshot-1.png"    
+        path: "src/resources/snapshots/original-screenshot-1.png"    
 
       - name: Hover to the first item
         text: Schedule doctor appointment
