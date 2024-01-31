@@ -9,7 +9,7 @@ url: https://example.cypress.io/todo#/
 defaultWaitSeconds: 5
 report:
   theme: bootstrap # 'bootstrap' or 'simple' or 'foundation' or 'hierarchy'
-  json: src/example/resources/reports/results.json
-  html: src/example/resources/reports/results.html
+  json: src/resources/reports/results.json
+  html: src/resources/reports/results.html
   title: Test Summary Report
   launch: true
