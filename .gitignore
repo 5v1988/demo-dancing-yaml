@@ -4,3 +4,5 @@ src/resources/.DS_Store
 src/resources/snapshots/.DS_Store
 .DS_Store
 package-lock.json
+src/resources/reports
+src/resources/snapshots
