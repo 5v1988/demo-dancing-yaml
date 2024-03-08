@@ -3,7 +3,7 @@ output:
     red: 255
     green: 0
     blue: 0
-  errorType: flat #"flat" or "movement" or "flatDifferenceIntensity" or "movementDifferenceIntensity" or "diffOnly"
+  errorType: movement #"flat" or "movement" or "flatDifferenceIntensity" or "movementDifferenceIntensity" or "diffOnly"
   transparency: 0.3
   largeImageThreshold: 1200
   useCrossOrigin: false
@@ -12,11 +12,11 @@ output:
 #   g: 0
 #   b: 0
 #   a: 0
-  boundingBoxes:
-    - left: 0
-      top: 0
-      right: 1300
-      bottom: 800
+# boundingBoxes:
+#   - left: 0
+#     top: 0
+#     right: 1300
+#     bottom: 800
 #   ignoredBoxes:
 #   - left: 100
 #     top: 100
