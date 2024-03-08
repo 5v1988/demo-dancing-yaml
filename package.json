@@ -1,6 +1,6 @@
 {
   "name": "demo-dancing-yaml",
-  "version": "1.0.0-RC18",
+  "version": "1.0.0-RC19",
   "description": "a demo project using dancing-yaml",
   "type": "module",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dancing-yaml": "^1.0.0-RC18"
+    "dancing-yaml": "^1.0.0-RC19"
   }
 }
