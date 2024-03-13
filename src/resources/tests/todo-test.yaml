@@ -74,7 +74,12 @@ tests:
       - name: Screenshot after deleting all items
         pause: 1
         action: snapshot
-        path: "src/resources/snapshots/original-screenshot-2.png"     
+        path: "src/resources/snapshots/original-screenshot-2.png"
+
+      - name: Set value for name in storage
+        action: setValue
+        key: Name
+        value: Veera
 
     assert:
       - name: Verify if the first item deleted
@@ -106,3 +111,8 @@ tests:
         original: "src/resources/snapshots/original-screenshot-2.png"
         reference: "src/resources/snapshots/reference-screenshot-2.png"
         tolerance: 1
+
+      - name: Compare value from storage
+        type: compareValue
+        key: Name
+        value: Veera            
