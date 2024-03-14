@@ -8,12 +8,17 @@ tests:
         url: url
 
     act:
+      - name: Set value for name in storage
+        action: setValue
+        key: firstItem
+        value: Schedule doctor appointment
+
       - name: Add the first item
         id: 10001
         role: textbox
         text: What needs to be done?
         action: type
-        value: Schedule doctor appointment
+        value: ${firstItem}
 
       - name: Press Enter
         pause: 1
@@ -76,11 +81,6 @@ tests:
         action: snapshot
         path: "src/resources/snapshots/original-screenshot-2.png"
 
-      - name: Set value for name in storage
-        action: setValue
-        key: Name
-        value: Veera
-
     assert:
       - name: Verify if the first item deleted
         pause: 2
@@ -111,8 +111,8 @@ tests:
         original: "src/resources/snapshots/original-screenshot-2.png"
         reference: "src/resources/snapshots/reference-screenshot-2.png"
         tolerance: 1
-
+        
       - name: Compare value from storage
-        type: compareValue
-        key: Name
-        value: Veera            
+        type: compare
+        value: ${firstItem} 
+        expectedValue: Schedule doctor appointment    
