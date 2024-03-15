@@ -1,6 +1,6 @@
 <h1 align="center">
 	<br>
-	<img width="480" src="src/media/dy-logo.svg" alt="Dancing-Yaml">
+	<img width="480" src="src/media/dy-logo.svg" alt="Kanstructor">
 	<br>
 	<br>
 </h1>
@@ -57,7 +57,7 @@ npm run test
 		browser: chrome
 		headless: false
 		device: Desktop Chrome
-		url: https://github.com/5v1988/dancing-yaml
+		url: https://github.com/5v1988/kanstructor
 	```
 
 — **Step 6** : Lastly, to run all tests, the test runner `runMe.js` needs to be created in the project as follows:

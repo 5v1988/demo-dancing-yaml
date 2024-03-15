@@ -1,3 +1,3 @@
-import  main  from 'dancing-yaml'
+import  main  from 'kanstructor'
 
 main();
