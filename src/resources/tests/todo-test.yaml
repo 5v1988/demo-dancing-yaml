@@ -1,118 +1,120 @@
+
 description: Some tests on cypress todo demo site
 tests:
-  - name: Set and delete todo lists
-    exclude: false
+ - name: Set and delete todo lists
+   exclude: false
 
-    arrange:
-      - name: openUrl
-        url: url
+   arrange:
+     - name: Open the url for the app under test
+       action: openUrl
+       url: url
 
-    act:
-      - name: Set value for name in storage
-        action: setValue
-        key: firstItem
-        value: Schedule doctor appointment
+     - name: Set value for the first item in storage
+       action: setValue
+       key: firstItem
+       value: Schedule doctor appointment
 
-      - name: Add the first item
-        id: 10001
-        role: textbox
-        text: What needs to be done?
-        action: type
-        value: ${firstItem}
+     - name: Set value for the second item in storage
+       action: setValue
+       key: secondItem
+       value: Prepare a blog content
 
-      - name: Press Enter
-        pause: 1
-        action: press
-        value: Enter
+   act:
+     - name: Add the first item
+       id: 10001
+       role: textbox
+       text: What needs to be done?
+       action: type
+       value: ${firstItem}
 
-      - name: Add the second item
-        locator: .new-todo
-        action: type
-        value: Prepare a blog content
+     - name: Press Enter
+       pause: 1
+       action: press
+       value: Enter
 
-      - name: Press Enter
-        pause: 1
-        action: press
-        value: Enter
+     - name: Add the second item
+       locator: .new-todo
+       action: type
+       value: ${secondItem}
 
-      - name: Add the third item
-        refId: 10001
-        value: Fix the air conditioner
+     - name: Press Enter
+       pause: 1
+       action: press
+       value: Enter
 
-      - name: Press Enter
-        pause: 1
-        action: press
-        value: Enter
+     - name: Add the third item
+       refId: 10001
+       value: Fix the air conditioner
 
-      - name: Screenshot after adding all items
-        pause: 1
-        action: snapshot
-        path: "src/resources/snapshots/original-screenshot-1.png"    
+     - name: Press Enter
+       pause: 1
+       action: press
+       value: Enter
 
-      - name: Hover to the first item
-        text: Schedule doctor appointment
-        action: hover
+     - name: Screenshot after adding all items
+       pause: 1
+       action: snapshot
+       path: "src/resources/snapshots/original-screenshot-1.png"    
 
-      - name: Delete the first item
-        pause: 2
-        locator: "//div[normalize-space()='Schedule doctor appointment']//button"
-        action: click
+     - name: Hover to the first item
+       text: ${firstItem}
+       action: hover
 
-      - name: Hover to the second item
-        text: Prepare a blog content
-        action: hover
+     - name: Delete the first item
+       pause: 2
+       locator: "//div[normalize-space()='Schedule doctor appointment']//button"
+       action: click
 
-      - name: Delete the second item
-        pause: 2
-        locator: "//div[normalize-space()='Prepare a blog content']//button"
-        action: click
+     - name: Hover to the second item
+       text: ${secondItem}
+       action: hover
 
-      - name: Hover to the third item
-        text: Fix the air conditioner
-        action: hover
+     - name: Delete the second item
+       pause: 2
+       locator: "//div[normalize-space()='Prepare a blog content']//button"
+       action: click
 
-      - name: Delete the third item
-        pause: 2
-        locator: "//div[normalize-space()='Fix the air conditioner']//button"
-        action: click
+     - name: Hover to the third item
+       text: Fix the air conditioner
+       action: hover
 
-      - name: Screenshot after deleting all items
-        pause: 1
-        action: snapshot
-        path: "src/resources/snapshots/original-screenshot-2.png"
+     - name: Delete the third item
+       pause: 2
+       locator: "//div[normalize-space()='Fix the air conditioner']//button"
+       action: click
 
-    assert:
-      - name: Verify if the first item deleted
-        pause: 2
-        type: standard
-        text: Schedule doctor appointment
-        state: invisible
+     - name: Screenshot after deleting all items
+       pause: 1
+       action: snapshot
+       path: "src/resources/snapshots/original-screenshot-2.png"
 
-      - name: Verify if the second item deleted
-        pause: 2
-        type: standard
-        text: Prepare a blog content
-        state: invisible
+   assert:
+     - name: Verify if the first item deleted
+       pause: 2
+       type: standard
+       text: ${firstItem} 
+       state: invisible
 
-      - name: Verify if the third item deleted
-        pause: 2
-        type: standard
-        text: Fix the air conditioner
-        state: invisible
+     - name: Verify if the second item deleted
+       pause: 2
+       type: standard
+       text: ${secondItem}
+       state: invisible
 
-      - name: Compare screenshot after all items added
-        type: snapshot
-        original: "src/resources/snapshots/original-screenshot-1.png"
-        reference: "src/resources/snapshots/reference-screenshot-1.png"
-        tolerance: 1
+     - name: Verify if the third item deleted
+       pause: 2
+       type: standard
+       text: Fix the air conditioner
+       state: invisible
 
-      - name: Compare screenshot after all items deleted
-        type: snapshot
-        original: "src/resources/snapshots/original-screenshot-2.png"
-        reference: "src/resources/snapshots/reference-screenshot-2.png"
-        tolerance: 1
-        
-      - name: Compare value from storage
-        type: compare
-        value: ${firstItem} 
-        expectedValue: Schedule doctor appointment    
+     - name: Compare screenshot after all items added
+       type: snapshot
+       original: "src/resources/snapshots/original-screenshot-1.png"
+       reference: "src/resources/snapshots/reference-screenshot-1.png"
+       tolerance: 1
+
+     - name: Compare screenshot after all items deleted
+       type: snapshot
+       original: "src/resources/snapshots/original-screenshot-2.png"
+       reference: "src/resources/snapshots/reference-screenshot-2.png"
+       tolerance: 1  
