@@ -1,6 +1,6 @@
 {
   "name": "kanstructor-demo-project",
-  "version": "1.0.0-RC2",
+  "version": "1.0.0-RC3",
   "description": "a demo project using dancing-yaml",
   "type": "module",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kanstructor": "^1.0.0-RC2"
+    "kanstructor": "^1.0.0-RC3"
   }
 }

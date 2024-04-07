@@ -113,8 +113,8 @@ tests:
        reference: "src/resources/snapshots/reference-screenshot-1.png"
        tolerance: 1
 
-     - name: Compare screenshot after all items deleted
-       type: snapshot
+     - name: Compare screenshot after all items deleted by OpenCV
+       type: glancing
        original: "src/resources/snapshots/original-screenshot-2.png"
        reference: "src/resources/snapshots/reference-screenshot-2.png"
-       tolerance: 1  
+       tolerance: 3
